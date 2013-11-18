@@ -98,9 +98,7 @@ App.prototype.reset = function() {
 
   var tableElement = document.querySelector('#game');
   tableElement.innerHTML = '';
-  var rows = this.config.rows;
-  var cols = this.config.cols;
-  this._createField(rows, cols);
+  this._createField(this.config.rows, this.config.cols);
   this._setCurrentTime(this.currentTime);
 
 };
