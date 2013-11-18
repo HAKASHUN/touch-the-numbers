@@ -1,0 +1,15 @@
+#game {
+
+}
+
+#game td {
+    background-color: yellow;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#game td.selected {
+    opacity: .5;
+    background-color: gray;
+}
