@@ -1,15 +1,18 @@
 # Touch The Numbers
-===================
 
 シンプルなTouch The Numbersのアプリです。
 皆さんのアイデアと技術を駆使して、もっと楽しいTouch The Numbersアプリを作ってみましょう。
+
+## ダウンロード
+* Pure JavaScriptのバージョンは[こちら](https://github.com/HAKASHUN/touch-the-numbers/archive/master.zip)
+* jQueryのバージョンは[こちら](https://github.com/HAKASHUN/touch-the-numbers-jquery/archive/master.zip)
 
 ## 制限時間
 ~ 18:00まで
 
 ## 発表
 18:00 ~ 19:00
-1人3~5分程度
+1人につき3 ~ 5分程度
 
 ## ヒント
 
