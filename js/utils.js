@@ -30,3 +30,16 @@ Utils.createNumberArray = function(max) {
   }
   return arr;
 };
+
+/**
+ * 値を数値に変換する
+ * @param {*} value
+ * @return {Number}
+ */
+Utils.toNumber = function(value) {
+  if(typeof value == 'number') {
+      return value;
+  } else {
+      return parseInt(value, 10)
+  }
+};

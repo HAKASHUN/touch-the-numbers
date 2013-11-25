@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /**
- * App
+ * ゲームのクラス
  * @constructor
  */
 var App = function() {
-  this.timer = null;
-  this.currentTime = 0;
-  this.nextNumber = 1;
-  this.challengeNumber = 1;
+  this.timer = null; //動作中のタイマーID
+  this.currentTime = 0; //現在の経過秒数
+  this.nextNumber = 1; //次に押す番号を持つ
+  this.challengeNumber = 1; //チャレンジの回数
   this.init();
 };
 
@@ -34,14 +34,16 @@ App.prototype.init = function() {
 
 /**
  * フィールドを作成
- * @param {number} rows 列数
- * @param {number} cols 行数
+ * @param {Number} rows 列数
+ * @param {Number} cols 行数
  * @private
  */
 App.prototype._createField = function(rows, cols) {
   var self = this;
   var maxNumber = rows * cols;
+  //1 ~ maxNumberまでの数字が入った配列を作成(ex. [1, 2, 3 ... maxNumber])
   var numbers = Utils.createNumberArray(maxNumber);
+  //配列の中身をランダムにシャッフルする
   var shuffledNumbers = Utils.shuffleArray(numbers);
 
   var tableElement = document.querySelector('#game');
@@ -100,7 +102,30 @@ App.prototype.reset = function() {
   tableElement.innerHTML = '';
   this._createField(this.config.rows, this.config.cols);
   this._setCurrentTime(this.currentTime);
+};
 
+/**
+ * 番号がクリックされた時の処理
+ * @param {Element} target
+ */
+App.prototype.clicked = function(target) {
+  var targetNumber = Utils.toNumber(target.textContent);
+  var rows = this.config.rows;
+  var cols = this.config.cols;
+
+  if(targetNumber === this.nextNumber) {
+    if(targetNumber === 1) {
+      //ゲームスタート
+      this.start();
+    }
+    target.className = 'selected';
+    this.nextNumber++;
+  }
+
+  if(targetNumber === rows * cols) {
+    //ゲーム終了
+    this.end();
+  }
 };
 
 /**
@@ -115,7 +140,7 @@ App.prototype._timecount = function() {
 
 /**
  * 経過時間をセットする
- * @param {number} time
+ * @param {Number} time
  * @private
  */
 App.prototype._setCurrentTime = function(time) {
@@ -123,31 +148,5 @@ App.prototype._setCurrentTime = function(time) {
 
   //必ず小数点1位まで表示する
   timeElement.textContent = time.toFixed(1);
-};
-
-/**
- * 番号がクリックされた時の処理
- * @param {Element} target
- */
-App.prototype.clicked = function(target) {
-  var targetNumber = target.textContent;
-  var rows = this.config.rows;
-  var cols = this.config.cols;
-
-  if(targetNumber == this.nextNumber) {
-
-    if(targetNumber == 1) {
-      //ゲームスタート
-      this.start();
-    }
-
-    target.className = 'selected';
-    this.nextNumber++;
-  }
-
-  if(targetNumber == rows * cols) {
-    //ゲーム終了
-    this.end();
-  }
 };
 
