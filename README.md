@@ -3,6 +3,11 @@
 シンプルなTouch The Numbersのアプリです。
 皆さんのアイデアと技術を駆使して、もっと楽しいTouch The Numbersアプリを作ってみましょう。
 
+
+## 他のサンプルアプリもいじってみよう！
+* lights-out[ダウンロード](https://github.com/HAKASHUN/lights-out/archive/master.zip)
+* 15puzzle[ダウンロード](https://github.com/HAKASHUN/js15puzzle/archive/master.zip)
+
 ## ダウンロード
 * Pure JavaScriptのバージョンは[こちら](https://github.com/HAKASHUN/touch-the-numbers/archive/master.zip)
 * jQuery(2.0.3)のバージョンは[こちら](https://github.com/HAKASHUN/touch-the-numbers-jquery/archive/master.zip)
