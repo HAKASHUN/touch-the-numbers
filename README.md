@@ -5,7 +5,6 @@
 
 ## ダウンロード
 * Pure JavaScriptのバージョンは[こちら](https://github.com/HAKASHUN/touch-the-numbers/archive/master.zip)
-* jQueryのバージョンは[こちら](https://github.com/HAKASHUN/touch-the-numbers-jquery/archive/master.zip)
 
 ## 制限時間
 ~ 18:00まで
