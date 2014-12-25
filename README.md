@@ -3,6 +3,8 @@
 シンプルなTouch The Numbersのアプリです。
 皆さんのアイデアと技術を駆使して、もっと楽しいTouch The Numbersアプリを作ってみましょう。
 
+## DEMO
+http://hakashun.github.io/touch-the-numbers/
 
 ## 他のサンプルアプリもいじってみよう！
 * lights-out[ダウンロード](https://github.com/HAKASHUN/lights-out/archive/master.zip)
